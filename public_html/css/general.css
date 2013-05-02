@@ -15,22 +15,37 @@ body
     background-color: white;
 }
 
-.TitleContent
+.CommingSoonContent
 {
     margin-top: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    color: black;
+    margin-left: 25px;    
+    color: white;
     width: 500px;
+    height: 400px;
     font-size: 30pt;
     font-family: "Comic Sans MS", cursive, sans-serif;
-    text-align: center;
-    text-shadow:5px 5px 10px black;
+    text-align: center;   
+    background-color: #333333;
+    opacity: 0.5;
+    border-radius: 10px;
+    float: left;
 }
 
-.AnimationBox
+.ContactFormBox
 {
-    margin-top: 25px;    
+    margin-top: 25px;
+    margin-right: 25px;   
+    padding: 5px;
+    color: white;
+    width: 500px;
+    height: 400px;
+    font-size: 30pt;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: left;   
+    background-color: #333333;
+    opacity: 0.5;
+    border-radius: 10px;
+    float:right;
 }
 
 .Header img
@@ -39,11 +54,13 @@ body
     margin-right: auto;
     display: block;
 }
-canvas
+
+label
+{    
+    font-size: 14px;    
+}
+
+input, label
 {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;
     display: block;
 }
