@@ -1,0 +1,49 @@
+
+body
+{
+    background-color: #999999; 
+    padding: 0;
+    margin: 0;
+}
+
+.Header
+{
+    height: 200px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;     
+    background-color: white;
+}
+
+.TitleContent
+{
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    width: 500px;
+    font-size: 30pt;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;
+    text-shadow:5px 5px 10px black;
+}
+
+.AnimationBox
+{
+    margin-top: 25px;    
+}
+
+.Header img
+{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+canvas
+{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
