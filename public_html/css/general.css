@@ -3,7 +3,12 @@ body
 {
     background-color: #999999; 
     padding: 0;
-    margin: 0;
+    margin: 0;    
+}
+
+img
+{
+    display: block;    
 }
 
 .Header
@@ -15,10 +20,29 @@ body
     background-color: white;
 }
 
+.Content
+{    
+    width: 100%;
+}
+
+.Content,.Header
+{
+    min-width: 1100px;
+}
+
+.SocialMediaLinks
+{
+    position: absolute;    
+    right: 5px; 
+    top:166px;
+    height: 200px;
+}
+
 .CommingSoonContent
 {
     margin-top: 25px;
-    margin-left: 25px;    
+    margin-left: 25px;
+    padding: 5px;    
     color: white;
     width: 500px;
     height: 400px;
@@ -30,7 +54,11 @@ body
     border-radius: 10px;
     float: left;
 }
-
+.CommingSoonContent p,li
+{
+    text-align: left;
+    font-size: 14pt;
+}
 .ContactFormBox
 {
     margin-top: 25px;
