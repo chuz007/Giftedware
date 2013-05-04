@@ -7,7 +7,7 @@ var facebookLink = function()
     var fbObject = $('#facebookLogo');     
     var animationTimer;
     var currentLogoDeg = 0;
-    
+    var rotDeg = 30;
     this.initialize = function()
     {
         animationTimer = setTimeout();
@@ -22,18 +22,18 @@ var facebookLink = function()
     
     this.animate = function()
     {
-        
+        this.rotate();
     };
     
     
-    this.rotate = function(deg)
+    this.rotate = function()
     {
-        currentLogoDeg = currentLogoDeg + 5;
         $(fbObject).css({WebkitTransform:'rotate('+currentLogoDeg+'deg)'});               
-        if(currentLogoDeg <= deg)
-        {
-            currentLogoDeg = currentLogoDeg + 10;                
-        }    
+            if(currentLogoDeg <= rotDeg)
+            {
+                currentLogoDeg = currentLogoDeg + 5;                   
+            }
+        setTimeout(this.rotate,500);            
     };
     
 };
