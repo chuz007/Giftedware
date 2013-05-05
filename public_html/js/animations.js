@@ -4,36 +4,44 @@
  */
 var facebookLink = function()
 {
-    var fbObject = $('#facebookLogo');     
-    var animationTimer;
-    var currentLogoDeg = 0;
-    var rotDeg = 30;
+    var fbObject = $('#facebookLogo');             
+    var timer; 
+    var cssRotatorName;
     this.initialize = function()
-    {
-        animationTimer = setTimeout();
+    {        
         $('#facebookLogo').on('mouseover',function(){
                     $(this).animate({width:'35px'},100);
         });
         $('#facebookLogo').on('mouseout',function(){
             $(this).animate({width:'29px'},100);
-        });
-        this.animate();
-    };
+        });        
+        timer = setInterval(this.animate,10000,this.rotate);        
+        var browser = $.browser;             
+    };   
     
-    this.animate = function()
+    this.animate = function(rotateFunc)
     {
-        this.rotate();
+        //var localRotate = rotateFunc;
+        rotateFunc(15);        
+        setTimeout(function(){
+            rotateFunc(0);
+            setTimeout(function(){
+                rotateFunc(-15);
+                setTimeout(function(){
+                    rotateFunc(0);
+                },100);
+            },100);
+        },100);        
     };
     
     
-    this.rotate = function()
+    this.rotate = function(deg)
     {
-        $(fbObject).css({WebkitTransform:'rotate('+currentLogoDeg+'deg)'});               
-            if(currentLogoDeg <= rotDeg)
-            {
-                currentLogoDeg = currentLogoDeg + 5;                   
-            }
-        setTimeout(this.rotate,500);            
-    };
+        setTimeout(function(){                                    
+            $(fbObject).css({WebkitTransform:'rotate('+deg+'deg)'});            
+            $(fbObject).css({'-moz-transform':'rotate('+deg+'deg)'});
+            $(fbObject).css({'-ms-transform':'rotate('+deg+'deg)'});            
+        },250);                 
+    };        
     
 };
